@@ -45,6 +45,6 @@ int main(int argc, char* argv[]) {
 		std::cout << argv[2] << " degrees Celsius equals " << c_ctof(argv[2]) << " degress Fahrenheit\n";
 		return 0;
 	}
-	std::cout << "ERROR: No Valid input"
+	std::cout << "ERROR: No Valid input\n";
 	return 0;
 }
