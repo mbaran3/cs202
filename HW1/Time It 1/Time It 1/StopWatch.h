@@ -8,12 +8,16 @@
 StopWatch::StopWatch() {
 	start = std::chrono::high_resolution_clock::now();
 }
-StopWatch::~StopWatch(){
+
+double StopWatch::getDuration() {
 
 	end = std::chrono::high_resolution_clock::now();
 	duration = end - start;
-	std::cout << duration.count() << "s\n";
+	return duration.count();
+}
+void StopWatch::restWatch() {
 
+	start = std::chrono::high_resolution_clock::now();
 }
 
 #endif // !StopWatch_H
