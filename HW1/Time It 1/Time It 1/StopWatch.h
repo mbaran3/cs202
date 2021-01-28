@@ -6,9 +6,13 @@
 #define StopWatch_H
 
 StopWatch::StopWatch() {
+	start = std::chrono::high_resolution_clock::now();
+}
+StopWatch::~StopWatch(){
 
-	std::chrono::system_clock();
-	
+	end = std::chrono::high_resolution_clock::now();
+	duration = end - start;
+	std::cout << duration.count() << "s\n";
 
 }
 
