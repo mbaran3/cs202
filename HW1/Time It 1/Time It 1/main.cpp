@@ -19,16 +19,30 @@ std::vector<int> generateVector(int size) {
 
 }
 void binarySearch(std::vector<int> vInt, int needle) {
-	
+
 	StopWatch Time;
 	std::binary_search(vInt.begin(), vInt.end(), needle);
 	std::cout << "Search took " << Time.getDuration() << "s" << std::endl;
-
-}
+}	
 
 int main() {
 
 	
+	
+	std::vector<int> ten = generateVector(10);
+	std::vector<int> hundred = generateVector(100);
+	std::vector<int> thousand = generateVector(1000);
+	std::vector<int> ten_thousand = generateVector(10000);
+	std::vector<int> hundred_thousand = generateVector(100000);
+	std::vector<int> million = generateVector(1000000);
+	std::vector<int> ten_million = generateVector(10000000);
+	std::vector<int> hundred_million = generateVector(100000000);
+	
+
+
+
+	std::cout << "Finished generating" << std::endl;
+
 
 
 	return 0;
