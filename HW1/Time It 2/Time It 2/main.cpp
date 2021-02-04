@@ -31,11 +31,16 @@ std::vector<std::string> loadFiletoVector(std::string fileName) {
 	return vOutput;
 
 }
+void testAllFunction(std::string fileName) {
+
+	std::vector<std::string> vTaleoftwoCities = loadFiletoVector(fileName);
+	std::list<std::string> listTaleoftwoCities = loadFiletoList(fileName);
+
+}
 int main() {
 
 
-	std::vector<std::string> vTaleoftwoCities = loadFiletoVector("TaleoftwoCities.txt");
-	std::list<std::string> listTaleoftwoCities = loadFiletoList("Taleoftwocities.txt");
+	testAllFunction("TaleoftwoCities.txt");
 
 
 	return 0;
