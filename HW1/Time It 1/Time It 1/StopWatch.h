@@ -28,7 +28,7 @@ void StopWatch::stopTime() {
 	end = std::chrono::high_resolution_clock::now();
 }
 double StopWatch::getStopTime() {
-	duartion = end - start;
+	duration = end - start;
 	return duration.count();
 }
 #endif // !StopWatch_H
