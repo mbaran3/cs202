@@ -55,7 +55,9 @@ void revrseFunction(std::vector<int> vInt) {
 	std::cout << "Milliseconds :" << Time.getDurationmilli() << std::endl;
 	std::cout << std::endl;
 }
+// Creates a vector set size and runs all other functions and times them
 void testVector(int size) {
+	
 
 	std::vector<int> testVector = generateVector(size);
 	findFunction(testVector, 0);
