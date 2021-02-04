@@ -45,9 +45,19 @@ void binarySearch(std::vector<int> vInt, int needle) {
 
 }
 
+void revrseFunction(std::vector<int> vInt) {
+	StopWatch Time;
+	std::reverse(vInt.begin(), vInt.end());
+	std::cout << "std::reverse took" << std::endl;
+	std::cout << "Seconds :" << Time.getDuration() << std::endl;
+	std::cout << "Milliseconds :" << Time.getDurationmilli() << std::endl;
+	std::cout << std::endl;
+}
 int main() {
 
-	std::vector<int> tester = generateVector(100000);
+	std::vector<int> tester = generateVector(10);
+	revrseFunction(tester);
+	reverseCopyFunction(tester);
 	findFunction(tester, 0);
 	SortFunction(tester);
 	binarySearch(tester, 0);
