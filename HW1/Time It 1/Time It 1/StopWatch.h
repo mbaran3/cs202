@@ -31,5 +31,11 @@ double StopWatch::getStopTime() {
 	duration = end - start;
 	return duration.count();
 }
+
+void holdProgram() {
+	std::string hold;
+	std::cout << "Press Enter to continue" << std::endl;
+	getline(std::cin, hold);
+}
 #endif // !StopWatch_H
 

@@ -15,6 +15,7 @@ std::vector<int> generateVector(int size) {
 	std::vector<int> vInt(size);
 	for (int i = 0; i < size; i++)
 		vInt[i] = randNum(generator);
+	std::cout << "*****GENERATED VECTOR WITH SIZE OF " << size << "*****" << std::endl;
 	return vInt;
 }
 void SortFunction(std::vector<int>& vInt) {
@@ -23,6 +24,7 @@ void SortFunction(std::vector<int>& vInt) {
 	std::cout << "Sort took" << std::endl;
 	std::cout << "Seconds :" << Time.getDuration() << std::endl;
 	std::cout << "Milliseconds :" << Time.getDurationmilli() << std::endl;
+	std::cout << std::endl;
 }
 void findFunction(std::vector<int> vInt, int needle) {
 	
@@ -53,16 +55,30 @@ void revrseFunction(std::vector<int> vInt) {
 	std::cout << "Milliseconds :" << Time.getDurationmilli() << std::endl;
 	std::cout << std::endl;
 }
+void testVector(int size) {
+
+	std::vector<int> testVector = generateVector(size);
+	findFunction(testVector, 0);
+	revrseFunction(testVector);
+	SortFunction(testVector);
+	binarySearch(testVector, 0);
+	holdProgram();
+
+}
 int main() {
 
-	std::vector<int> tester = generateVector(10);
-	revrseFunction(tester);
-	reverseCopyFunction(tester);
-	findFunction(tester, 0);
-	SortFunction(tester);
-	binarySearch(tester, 0);
-	
+	StopWatch Time;
 
+	testVector(1000);
+	testVector(10000);
+	testVector(100000);
+	testVector(1000000);
+	testVector(10000000);
+	testVector(100000000);
+
+	std::cout << "\n\n Total Program run time :" << Time.getDuration() << "s" << std::endl;
+
+	
 
 	return 0;
 }
