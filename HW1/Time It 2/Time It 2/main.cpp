@@ -2,6 +2,7 @@
 #include <vector>
 #include <map>
 #include <list>
+#include <algorithm>
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -22,7 +23,7 @@ std::map<int, std::string> loadFiletoMap(std::string fileName) {
 		i++;
 
 	}
-	std::cout << fileName << " Took " << Time.getDurationmilli() << "ms to load to a list" << std::endl;
+	std::cout << fileName << " Took " << Time.getDurationmilli() << "ms to load to a map" << std::endl;
 	return mapOutput;
 }
 
@@ -36,6 +37,21 @@ std::list<std::string> loadFiletoList(std::string fileName) {
 		listOutput.push_back(output);
 	std::cout << fileName << " Took " << Time.getDurationmilli() << "ms to load to a list" << std::endl;
 	return listOutput;
+
+}
+void sortVector(std::vector<std::string> vBook) {
+
+	StopWatch Time;
+	std::sort(vBook.begin(), vBook.end());
+	std::cout << "Vecotr took " << Time.getDurationmilli() << "ms to sort" << std::endl;
+
+
+}
+void sortList(std::list<std::string> lBook) {
+	
+	StopWatch Time;
+	lBook.sort();
+	std::cout << "List took " << Time.getDurationmilli() << "ms to sort" << std::endl;
 
 }
 std::vector<std::string> loadFiletoVector(std::string fileName) {
@@ -55,6 +71,10 @@ void testAllFunction(std::string fileName) {
 	std::vector<std::string> vTaleoftwoCities = loadFiletoVector(fileName);
 	std::list<std::string> listTaleoftwoCities = loadFiletoList(fileName);
 	std::map<int, std::string> mapTaleoftwoCities = loadFiletoMap(fileName);
+	std::cout << std::endl;
+	sortList(listTaleoftwoCities);
+	sortVector(vTaleoftwoCities);
+	holdProgram();
 }
 int main() {
 
