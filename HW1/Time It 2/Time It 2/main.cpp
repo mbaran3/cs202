@@ -26,6 +26,19 @@ std::map<std::string, int> loadFiletoMap(std::string fileName) {
 	std::cout << fileName << " Took " << Time.getDurationmilli() << "ms to load to a map" << std::endl;
 	return mapOutput;
 }
+void findMap(std::map<std::string, int> theMap, std::string toFind) {
+
+	StopWatch Time;
+	auto it = theMap.find(toFind);
+	if (it != theMap.end()) {
+		std::cout << "Map found " << toFind << " in " << Time.getDurationmilli();
+		std::cout << "ms" << std::endl;
+	}
+	else {
+		std::cout << toFind << " was not found in " << Time.getDurationmilli();
+		std::cout << "ms" << std::endl;
+	}
+}
 void printMapbyValue(std::map<std::string, int> mapBook) {
 
 	StopWatch Time;
@@ -84,9 +97,10 @@ void testAllFunction(std::string fileName) {
 	std::vector<std::string> vTaleoftwoCities = loadFiletoVector(fileName);
 	std::list<std::string> listTaleoftwoCities = loadFiletoList(fileName);
 	std::map<std::string, int> mapTaleoftwoCities = loadFiletoMap(fileName);
-	printMapbyValue(mapTaleoftwoCities);
+
 	
-	
+	findMap(mapTaleoftwoCities, "1111");
+
 	std::cout << std::endl;
 	sortList(listTaleoftwoCities);
 	sortVector(vTaleoftwoCities);
