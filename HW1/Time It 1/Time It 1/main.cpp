@@ -5,12 +5,14 @@
 #include <random>
 #include "StopWatch.h";
 
-
+/*
+* generates a vector of users size
+*/
 std::vector<int> generateVector(int size) {
 
 	std::random_device seed;
 	std::mt19937 generator(seed());
-	std::uniform_int_distribution<int> randNum(1, size);
+	std::uniform_int_distribution<int> randNum(0, size);
 	StopWatch Time;
 	std::vector<int> vInt(size);
 	for (int i = 0; i < size; i++)
@@ -26,19 +28,21 @@ void SortFunction(std::vector<int>& vInt) {
 	std::cout << "Milliseconds :" << Time.getDurationmilli() << std::endl;
 	std::cout << std::endl;
 }
-void findFunction(std::vector<int> vInt, int needle) {
+void searchFunction(std::vector<int> vInt) {
 	
+	std::vector<int> needle = { -1 };
 	StopWatch Time;
-	auto finder = std::find(vInt.begin(), vInt.end(), needle);
-	std::cout << "std::find took" << std::endl;
+	std::search(vInt.begin(), vInt.end(), needle.begin(), needle.end());
+	std::cout << "std::search took" << std::endl;
 	std::cout << "Seconds :" << Time.getDuration() << std::endl;
 	std::cout << "Milliseconds :" << Time.getDurationmilli() << std::endl;
 	std::cout << std::endl;
+	
 }
 void binarySearch(std::vector<int> vInt, int needle) {
 
+	
 	StopWatch Time;
-	std::sort(vInt.begin(), vInt.end());
 	std::binary_search(vInt.begin(), vInt.end(), needle);
 	std::cout << "std::binary_search took" << std::endl;
 	std::cout << "Seconds :" << Time.getDuration() << std::endl;
@@ -55,30 +59,35 @@ void revrseFunction(std::vector<int> vInt) {
 	std::cout << "Milliseconds :" << Time.getDurationmilli() << std::endl;
 	std::cout << std::endl;
 }
-// Creates a vector set size and runs all other functions and times them
-void testVector(int size) {
+/*
+* creates a vector of users defined size and times how long it takes to
+* sort, revrse, std::find, and binary_search.
+* generates a new vector of ints after every run.
+* @param (size of vector, how many times to test a vector of that size);
+*/
+void testVector(int size, int runTimes) {
 	
 
+	for (int i = 0; i < runTimes; i++) {
+	std::cout << "************" << i + 1 << "************" << std::endl;
 	std::vector<int> testVector = generateVector(size);
-	findFunction(testVector, 0);
+	searchFunction(testVector);
 	revrseFunction(testVector);
 	SortFunction(testVector);
 	binarySearch(testVector, 0);
-	holdProgram();
-
+	}
 }
 int main() {
 
-	StopWatch Time;
-
-	testVector(1000);
-	testVector(10000);
-	testVector(100000);
-	testVector(1000000);
-	testVector(10000000);
-	testVector(100000000);
-
-	std::cout << "\n\n Total Program run time :" << Time.getDuration() << "s" << std::endl;
+	
+	testVector(10000, 5);
+	holdProgram();
+	testVector(100000, 5);
+	holdProgram();
+	testVector(10000000, 5);
+	holdProgram();
+	testVector(100000000, 5);
+	holdProgram();
 
 	
 
