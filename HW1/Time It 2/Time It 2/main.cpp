@@ -9,16 +9,16 @@
 
 
 
-std::map<int, std::string> loadFiletoMap(std::string fileName) {
+std::map<std::string, int> loadFiletoMap(std::string fileName) {
 
 	StopWatch Time;
-	std::map<int, std::string> mapOutput;
+	std::map<std::string, int> mapOutput;
 	std::string output;
 	std::ifstream inFile(fileName);
 	int i = 0;
 	while (std::getline(inFile, output)) {
 
-		std::pair<int, std::string> pair = std::make_pair(i, output);
+		std::pair<std::string, int> pair = std::make_pair(output, i);
 		mapOutput.insert(pair);
 		i++;
 
@@ -26,7 +26,20 @@ std::map<int, std::string> loadFiletoMap(std::string fileName) {
 	std::cout << fileName << " Took " << Time.getDurationmilli() << "ms to load to a map" << std::endl;
 	return mapOutput;
 }
+void printMapbyValue(std::map<std::string, int> mapBook) {
 
+	StopWatch Time;
+	std::vector < std::pair<std::string, int> > vMap;
+	for (auto i : mapBook)
+		vMap.push_back(i);
+	std::sort(vMap.begin(), vMap.end(), []
+	(const std::pair<std::string, int> a, const std::pair<std::string, int> b) {
+			return a.second < b.second;
+		});
+	for (auto i : vMap)
+		std::cout << i.first << "\n";
+
+}
 std::list<std::string> loadFiletoList(std::string fileName) {
 
 	StopWatch Time;
@@ -70,7 +83,10 @@ void testAllFunction(std::string fileName) {
 
 	std::vector<std::string> vTaleoftwoCities = loadFiletoVector(fileName);
 	std::list<std::string> listTaleoftwoCities = loadFiletoList(fileName);
-	std::map<int, std::string> mapTaleoftwoCities = loadFiletoMap(fileName);
+	std::map<std::string, int> mapTaleoftwoCities = loadFiletoMap(fileName);
+	printMapbyValue(mapTaleoftwoCities);
+	
+	
 	std::cout << std::endl;
 	sortList(listTaleoftwoCities);
 	sortVector(vTaleoftwoCities);
