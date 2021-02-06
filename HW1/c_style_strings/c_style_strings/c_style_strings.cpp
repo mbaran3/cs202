@@ -21,7 +21,26 @@ char* findstr(const char* str, const char* toFind) {
     int sizeToFind = 0; 
     while (toFind[sizeToFind]) // gets size of toFind
         sizeToFind++;
-  
+
+    for (int i = 0; i < sizeStr; i++) {
+        if (str[i] == toFind[0]) {
+            int charFound = 0;
+            for (int j = 0; j < sizeToFind; j++) {
+                
+                if (charFound == sizeToFind-1) {
+                    std::cout << "c string found from " << i << " to " << i + sizeToFind << std::endl;
+                    return nullptr;
+                }
+                if (str[i + j] != toFind[j])
+                    break;
+
+                else
+                    charFound++;
+            }
+
+        }
+    }
+    std::cout << "Not found";
     return nullptr;
 }
 int main()
@@ -29,8 +48,9 @@ int main()
     char word[] = "According to the belief of the Teutons these wicked giants will\n"
         "some day destroy the beautiful world.Even the gods themselves\n"
         "will be killed in a dreadful battle with them.\n";
-    
-    findstr(word, "beautiful");
+    char toFind[] = "Even the gods";
+   findstr(word, toFind);
+   
 
     char* newstr = strdup(word);
     std::cout << newstr;
