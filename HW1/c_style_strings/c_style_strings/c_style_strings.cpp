@@ -12,6 +12,7 @@ char* strdup(const char* str)
     newstr[size] = '\0';
      return newstr;   
 }
+
 char* findstr(const char* str, const char* toFind) {
 
     int sizeStr = 0;
@@ -27,20 +28,21 @@ char* findstr(const char* str, const char* toFind) {
             int charFound = 0;
             for (int j = 0; j < sizeToFind; j++) {
                 
+                //If its found the program will tell you the idex location of the string
                 if (charFound == sizeToFind-1) {
                     std::cout << "c string found from " << i << " to " << i + sizeToFind << std::endl;
                     return nullptr;
                 }
-                if (str[i + j] != toFind[j])
+                if (str[i + j] != toFind[j]) //resets if it finds an error
                     break;
 
                 else
-                    charFound++;
+                    charFound++; //keeps count of how many right character
             }
 
         }
     }
-    std::cout << "Not found";
+    std::cout << "Not found" << std::endl;
     return nullptr;
 }
 int main()
