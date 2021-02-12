@@ -15,6 +15,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Catch2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TestLocation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -23,16 +31,16 @@
     <Text Include="Frankenstein.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="..\..\Time It 2\Time It 2\TaleoftwoCities.txt">
+    <Text Include="MobyDick.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="..\..\Time It 2\Time It 2\MobyDick%3borTheWhale.txt">
+    <Text Include="PrideandPredjudice.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="..\..\Time It 2\Time It 2\TheKingJamesBible.txt">
+    <Text Include="TaleoftwoCities.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="..\..\Time It 2\Time It 2\PrideandPredjudice.txt">
+    <Text Include="TheKingJamesBible.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

@@ -140,13 +140,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TestLocation.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\Time It 2\Time It 2\MobyDick%3borTheWhale.txt" />
-    <Text Include="..\..\Time It 2\Time It 2\PrideandPredjudice.txt" />
-    <Text Include="..\..\Time It 2\Time It 2\TaleoftwoCities.txt" />
-    <Text Include="..\..\Time It 2\Time It 2\TheKingJamesBible.txt" />
+    <ClInclude Include="Catch2.h" />
+  </ItemGroup>
+  <ItemGroup>
     <Text Include="Frankenstein.txt" />
+    <Text Include="MobyDick.txt" />
+    <Text Include="PrideandPredjudice.txt" />
+    <Text Include="TaleoftwoCities.txt" />
+    <Text Include="TheKingJamesBible.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
