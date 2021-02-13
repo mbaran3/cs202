@@ -1,8 +1,12 @@
 #include <iostream>
 #include <string>
+#include <iterator>
 #include <fstream>
 #include <list>
+#include <algorithm>
 #include "Catch2.h"
+
+
 
 
 // Moves through the file to get to a desired line 
@@ -26,12 +30,27 @@ struct MetaData { // Meta data for books
 
 
 };
+//Searches the list and returns an iterator to the location of the searched title
+//This only works with title
+std::list<MetaData>::iterator searchtitle(const std::list<MetaData>& theList, std::string toFind) {
+	
+	std::list<MetaData>::iterator it = theList.begin();
+	while (it != theList.end()) {
+
+		if (it->title == toFind) {
+			return it;
+		}
+
+		it++;
+	}
+}
 bool operator > (MetaData a, MetaData b) {
 	return a.title > b.title;
 }
 bool operator < (MetaData a, MetaData b) {
 	return a.title < b.title;
  }
+
 std::ostream& operator << (std::ostream & os, const MetaData data) {
 
 	os << data.title << "\n" << data.author << std::endl;
@@ -66,7 +85,7 @@ std::list<MetaData> fillList() {
 	MetaData prideandPredjuice("PrideandPredjudice.txt");
 	MetaData taleOfTwoCities("TaleoftwoCities.txt");
 	
-	std::list<MetaData> myList; // the list that will act like a queue
+	std::list<MetaData> myList; 
 	
 	myList.push_back(frankenstein); // First Item in the list
 	myList.push_back(bible);
@@ -96,10 +115,23 @@ TEST_CASE("Test Stack: Last-in First Out") {
 	REQUIRE(sList.back().title == "Title: Pride and Prejudice"); // Test that new Back of the list
 
 }
-TEST_CASE("Testing Sort") {
+TEST_CASE("Testing Sorting and Inserting and Finding") {
 
 	MetaData mobydick("MobyDick.txt");
-	std::list<MetaData> sList = fillList();
+	std::list<MetaData> bookList = fillList();
 
+	bookList.sort();
+	
+	auto it = bookList.begin();
+	REQUIRE(it->title == "Title: A Tale of Two Cities"); // Test to see if the list is sorted
+	
+	it++; it++; // Moves iterator to the third book
+	bookList.insert(it, mobydick); // Inserts moby dick infront of the third book
+	--it; // Moves the iterator to point at Moby Dick
+	REQUIRE(it->title == "Title: Moby Dick; or The Whale"); // Check that the iterator is pointing at Moby Dick
+
+	auto it2 = searchtitle(bookList, "Title: The King James Bible"); // gets an iterator for where the book is
+	REQUIRE(it2->title == "Title: The King James Bible"); // test to see if the iterator is correct
+	
 }
 
