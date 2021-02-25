@@ -51,17 +51,30 @@ void printTokens(std::ostream& os, const std::vector<TokenAndPosition>& tokens) 
 		os << i.token << std::endl;
 	}
 }
-int main() {
+int main(int argc, char *argv[]) {
 
-	std::string fileName = "testing.txt";
+	std::string fileName = argv[1];
 	std::fstream inFile(fileName);
 
-	if (!inFile) 
+	if (!inFile) {
 		std::cout << "Error reading file" << std::endl;
-
+		return 1;
+	}
 	std::vector<TokenAndPosition> tokenized = readLines(inFile);
-	printTokens(std::cout, tokenized);
+	if (argc < 4) {
+	
+		if (strcmp(argv[2], "--lineonly") == 0) {
+			std::cout << "Program Complete" << std::endl;
+			return 0;
+		}
+		else {
+			std::cout << "Error to many argumnets please only use --lineonly as a second param" << std::endl;
+			return 1;
+		}
+		
+	}
+	else 
+		printTokens(std::cout, tokenized);
 
 	return 0;
-
 }
