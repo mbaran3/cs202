@@ -26,41 +26,41 @@ std::vector<std::string> lineToTokens(const std::string& line) {
 std::vector<TokenAndPosition> readLines(std::fstream& is) {
 
 	std::string line;
-	std::vector<TokenAndPosition> tokenInfo;
+	std::vector<TokenAndPosition> tokenInfo; // The totality of the tokens
 	int lineCounter = 1;
 	while (std::getline(is, line)) {
 
 		std::vector<std::string> tokens = lineToTokens(line);
-		int column = 0;
+		int column = 1;
 		for (auto i : tokens) {
-			TokenAndPosition singleToken{ i, lineCounter, column };
+			TokenAndPosition singleToken{ i, lineCounter, column }; // input as {token, line, column}
 			tokenInfo.push_back(singleToken);
-			column += i.size()+1;
+			column += i.size()+1; // Adds size of the word + 1 to account for spaces;
 		}
 		++lineCounter;
 	}
 	
 	return tokenInfo;
 }
+void printTokens(std::ostream& os, const std::vector<TokenAndPosition>& tokens) {
 
+	os << std::setw(3) << "Ln "  << "Col " << "Word" << std::endl;
+	for (auto i : tokens) {
+		os << std::setw(3) << i.line << " ";
+		os << std::setw(3) << i.column << " ";
+		os << i.token << std::endl;
+	}
+}
 int main() {
 
 	std::string fileName = "testing.txt";
 	std::fstream inFile(fileName);
 
-	if (!inFile)
+	if (!inFile) 
 		std::cout << "Error reading file" << std::endl;
-	else
-		std::cout << "Working" << std::endl;
 
 	std::vector<TokenAndPosition> tokenized = readLines(inFile);
-	std::cout << std::setw(3) << "Ln "  << "Col " << "Word" << std::endl;
-	for (auto i : tokenized) {
-		std::cout << std::setw(3) << i.line << " ";
-		std::cout << std::setw(3) << i.column << " ";
-		std::cout << i.token << std::endl;
-	}
-
+	printTokens(std::cout, tokenized);
 
 	return 0;
 
