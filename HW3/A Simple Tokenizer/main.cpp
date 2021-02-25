@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <sstream>
 #include <fstream>
-
+#include "StopWatch.h"
 
 struct TokenAndPosition {
 
@@ -23,6 +23,10 @@ std::vector<std::string> lineToTokens(const std::string& line) {
 	return vToken;
 
 }
+/*
+* @param the fstream to be read into a vector
+* returns vector<TokenAndPosition>
+*/
 std::vector<TokenAndPosition> readLines(std::fstream& is) {
 
 	std::string line;
@@ -42,6 +46,10 @@ std::vector<TokenAndPosition> readLines(std::fstream& is) {
 	
 	return tokenInfo;
 }
+/*
+* @param a ostream, can be cout to print to console
+* @param the vector<TokenAndPoosition> you want to be printed.
+*/
 void printTokens(std::ostream& os, const std::vector<TokenAndPosition>& tokens) {
 
 	os << std::setw(3) << "Ln "  << "Col " << "Word" << std::endl;
@@ -54,27 +62,30 @@ void printTokens(std::ostream& os, const std::vector<TokenAndPosition>& tokens) 
 int main(int argc, char *argv[]) {
 
 	std::string fileName = argv[1];
+	StopWatch timer;
 	std::fstream inFile(fileName);
 
-	if (!inFile) {
+	if (!inFile) { // ends the program is the file is not read
 		std::cout << "Error reading file" << std::endl;
 		return 1;
 	}
 	std::vector<TokenAndPosition> tokenized = readLines(inFile);
-	if (argc < 4) {
+	if (argc >= 3) {
 	
 		if (strcmp(argv[2], "--lineonly") == 0) {
+			std::cout << "The program took " << timer.getDurationmilli() << "ms" << std::endl;
 			std::cout << "Program Complete" << std::endl;
 			return 0;
 		}
-		else {
+		else { 
 			std::cout << "Error to many argumnets please only use --lineonly as a second param" << std::endl;
 			return 1;
 		}
 		
 	}
-	else 
+	else // if --lineonly isnt a param prints the tokens
 		printTokens(std::cout, tokenized);
+	std::cout << "The program took " << timer.getDuration() << "s" << std::endl;
 
 	return 0;
 }
