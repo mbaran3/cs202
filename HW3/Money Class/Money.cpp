@@ -21,9 +21,21 @@ std::ostream& operator<<(std::ostream& os, const Money& output){
 
 	return os;
 }
-bool operator == (Money a, Money b) {
-	return a.cents == b.cents;
+bool operator==(const Money& left, const Money& right) {
+	return left.cents == right.cents;
 }
-bool operator !=(Money a, Money b) {
-	return !(a.cents == b.cents);
+bool operator!=(const Money& left, const Money& right){
+	return !(left == right);
+}
+bool operator < (const Money& left, const Money& right) {
+	return left.cents < right.cents;
+}
+bool operator > (const Money& left, const Money& right) {
+	return right < left;
+}
+bool operator <= (const Money& left, const Money& right) {
+	return !(left > right);
+}
+bool operator >= (const Money& left, const Money& right) {
+	return !(left < right);
 }

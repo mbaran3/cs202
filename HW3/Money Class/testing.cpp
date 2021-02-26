@@ -53,19 +53,19 @@ TEST_CASE("Money relational operators") {
 	REQUIRE(!(m0 != m0));
 	REQUIRE((m0 != m1));
 
-	//REQUIRE(!(m0 < m0));
-	//REQUIRE((m0 < m1));
-	//REQUIRE(!(m1 < m0));
+	REQUIRE(!(m0 < m0));
+	REQUIRE((m0 < m1));
+	REQUIRE(!(m1 < m0));
 
-	//REQUIRE((m0 <= m0));
-	//REQUIRE((m0 <= m1));
-	//REQUIRE(!(m1 <= m0));
+	REQUIRE((m0 <= m0));
+	REQUIRE((m0 <= m1));
+	REQUIRE(!(m1 <= m0));
 
-	//REQUIRE(!(m0 > m0));
-	//REQUIRE(!(m0 > m1));
-	//REQUIRE((m1 > m0));
+	REQUIRE(!(m0 > m0));
+	REQUIRE(!(m0 > m1));
+	REQUIRE((m1 > m0));
 
-	//REQUIRE((m0 >= m0));
-	//REQUIRE(!(m0 >= m1));
-	//REQUIRE((m1 >= m0));
+	REQUIRE((m0 >= m0));
+	REQUIRE(!(m0 >= m1));
+	REQUIRE((m1 >= m0));
 }
