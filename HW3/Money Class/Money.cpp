@@ -1,9 +1,9 @@
-#include "Money.h"
+#include "Money.hpp"
 #include <iostream>
 #include <cmath>
 #include <iomanip>
 
-Money::Money(int dollar, int cent): cents(dollar*100+cent){
+Money::Money(int cent, int dollar): cents(dollar*100+cent){
 }
 Money::Money(){
 }
@@ -13,8 +13,17 @@ Money::Money(double dMoney) {
 }
 std::ostream& operator<<(std::ostream& os, const Money& output){
 	float money = 0.00;
-	money = (output.cents * .01);
-	return os << std::setprecision(2) << std::fixed << "$" << money;
+	money = std::abs((output.cents * .01));
+	if(output.cents < 0)
+		os << std::setprecision(2) << std::fixed << "-$" << money;
+	else
+		os << std::setprecision(2) << std::fixed << "$" << money;
+
+	return os;
 }
-
-
+bool operator == (Money a, Money b) {
+	return a.cents == b.cents;
+}
+bool operator !=(Money a, Money b) {
+	return !(a.cents == b.cents);
+}

@@ -26,10 +26,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Money.h">
+    <ClInclude Include="Catch2.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Catch2.hpp">
+    <ClInclude Include="Money.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
