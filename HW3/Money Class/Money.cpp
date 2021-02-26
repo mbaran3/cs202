@@ -61,5 +61,28 @@ Money& Money::operator-=(const Money& right) {
 	*this = *this - right;
 	return *this;
 }
+Money& Money::operator*=(const Money& right) {
+	 _cents *= right._cents;
+	 return *this;
+}
+Money& Money::operator/=(const Money& right) {
+	_cents /= right._cents;
+	return *this;
+}
+Money operator/(Money left, const Money& right) {
+	return left /= right;
+}
+Money operator*(Money left, const Money& right) {
+	return left *= right;
+}
+Money& Money::operator*=(const double dTimes) {
+	_cents = _cents * dTimes;
+	return *this;
+}
+Money& Money::operator/=(const double dDivid) {
+	_cents = _cents / dDivid;
+	return *this;
+}
+
 
 

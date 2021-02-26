@@ -18,6 +18,11 @@ public:
 	Money(double dMoney);
 	Money& operator +=(const Money& right);
 	Money& operator -=(const Money& right);
+	Money& operator /=(const Money& right);
+	Money& operator *=(const Money& right);
+	//Money& operator *(const double dTimes);
+	Money& operator*=(const double dTimes);
+	Money& operator/=(const double dDivid);
 
 
 private:
@@ -26,7 +31,8 @@ private:
 };
 
 Money operator -(const Money& left, const Money& right);
-
+Money operator *(Money left, const Money& right);
+Money operator /(Money left, const Money& right);
 
 bool operator != (const Money& a, const Money& b);
 bool operator >(const Money& a, const Money& b);
