@@ -13,6 +13,7 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h \
+  /usr/include/c++/10/pstl/pstl_config.h \
   /usr/include/c++/10/ostream \
   /usr/include/c++/10/ios \
   /usr/include/c++/10/iosfwd \
@@ -124,6 +125,9 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
   /usr/include/c++/10/ext/alloc_traits.h \
   /usr/include/c++/10/bits/alloc_traits.h \
   /usr/include/c++/10/bits/stl_construct.h \
+  /usr/include/c++/10/string_view \
+  /usr/include/c++/10/bits/functional_hash.h \
+  /usr/include/c++/10/bits/string_view.tcc \
   /usr/include/c++/10/ext/string_conversions.h \
   /usr/include/c++/10/cstdlib \
   /usr/include/stdlib.h \
@@ -155,7 +159,6 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/10/bits/charconv.h \
-  /usr/include/c++/10/bits/functional_hash.h \
   /usr/include/c++/10/bits/basic_string.tcc \
   /usr/include/c++/10/bits/locale_classes.tcc \
   /usr/include/c++/10/system_error \
@@ -176,8 +179,16 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
   /usr/include/c++/10/bits/ostream.tcc \
   /usr/include/c++/10/istream \
   /usr/include/c++/10/bits/istream.tcc \
-  Rational.hpp
+  Rational.hpp \
+  /usr/include/c++/10/numeric \
+  /usr/include/c++/10/bits/stl_numeric.h \
+  /usr/include/c++/10/pstl/glue_numeric_defs.h \
+  /usr/include/c++/10/pstl/execution_defs.h
 
+
+/usr/include/c++/10/pstl/execution_defs.h:
+
+/usr/include/c++/10/bits/stl_numeric.h:
 
 /usr/include/c++/10/istream:
 
@@ -189,13 +200,7 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
-/usr/include/c++/10/bits/ios_base.h:
-
-/usr/include/c++/10/bits/stl_iterator_base_types.h:
-
-/usr/include/c++/10/initializer_list:
-
-/usr/include/c++/10/bits/range_cmp.h:
+/usr/include/wctype.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -218,8 +223,6 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
 /usr/include/c++/10/cstdint:
 
 /usr/include/c++/10/bits/ptr_traits.h:
-
-/usr/include/c++/10/bits/stl_iterator.h:
 
 /usr/include/c++/10/bits/stl_pair.h:
 
@@ -251,6 +254,10 @@ Rational.hpp:
 
 /usr/include/c++/10/typeinfo:
 
+/usr/include/c++/10/bits/stl_iterator.h:
+
+/usr/include/c++/10/pstl/pstl_config.h:
+
 /usr/include/c++/10/bits/predefined_ops.h:
 
 /usr/include/c++/10/cctype:
@@ -263,9 +270,9 @@ Rational.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/wctype.h:
-
 /usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/10/pstl/glue_numeric_defs.h:
 
 /usr/include/c++/10/debug/assertions.h:
 
@@ -279,6 +286,14 @@ Rational.hpp:
 
 /usr/include/c++/10/bits/std_abs.h:
 
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/c++/10/iosfwd:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
 /usr/include/c++/10/debug/debug.h:
 
 /usr/include/c++/10/bits/cpp_type_traits.h:
@@ -290,14 +305,6 @@ Rational.hpp:
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++locale.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/c++/10/iosfwd:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/stdc-predef.h:
 
@@ -320,6 +327,12 @@ Rational.hpp:
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdarg.h:
 
 /usr/include/sched.h:
+
+/usr/include/c++/10/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/10/bits/ios_base.h:
+
+/usr/include/c++/10/initializer_list:
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h:
 
@@ -358,6 +371,10 @@ Rational.hpp:
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/c++/10/cwchar:
+
+/usr/include/c++/10/bits/range_cmp.h:
+
+/usr/include/c++/10/string_view:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
@@ -435,6 +452,10 @@ main.cpp:
 
 /usr/include/c++/10/cstdio:
 
+/usr/include/c++/10/cwctype:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++allocator.h:
@@ -459,6 +480,8 @@ main.cpp:
 
 /usr/include/c++/10/backward/binders.h:
 
+/usr/include/c++/10/bits/string_view.tcc:
+
 /usr/include/c++/10/bits/memoryfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
@@ -474,6 +497,8 @@ main.cpp:
 /usr/include/c++/10/bits/alloc_traits.h:
 
 /usr/include/c++/10/bits/stl_construct.h:
+
+/usr/include/c++/10/bits/functional_hash.h:
 
 /usr/include/c++/10/cstdlib:
 
@@ -515,7 +540,7 @@ main.cpp:
 
 /usr/include/asm-generic/errno-base.h:
 
-/usr/include/c++/10/bits/functional_hash.h:
+/usr/include/c++/10/numeric:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -526,7 +551,3 @@ main.cpp:
 /usr/include/c++/10/streambuf:
 
 /usr/include/c++/10/bits/basic_ios.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/c++/10/cwctype:

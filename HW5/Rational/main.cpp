@@ -4,8 +4,8 @@
 int main(){
 
     Rational<int> oneThird(1, 3);
-
-    std::cout << oneThird;
+    Rational<int> twoSixiths(2, 6);
+    std::cout << oneThird << " " << twoSixiths << std::endl;
 
     return 0;
 }

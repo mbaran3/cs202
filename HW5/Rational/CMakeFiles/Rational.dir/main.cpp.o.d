@@ -9,8 +9,9 @@ CMakeFiles/Rational.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h \
- /usr/include/c++/10/ostream /usr/include/c++/10/ios \
- /usr/include/c++/10/iosfwd /usr/include/c++/10/bits/stringfwd.h \
+ /usr/include/c++/10/pstl/pstl_config.h /usr/include/c++/10/ostream \
+ /usr/include/c++/10/ios /usr/include/c++/10/iosfwd \
+ /usr/include/c++/10/bits/stringfwd.h \
  /usr/include/c++/10/bits/memoryfwd.h /usr/include/c++/10/bits/postypes.h \
  /usr/include/c++/10/cwchar /usr/include/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -100,7 +101,9 @@ CMakeFiles/Rational.dir/main.cpp.o: \
  /usr/include/c++/10/bits/basic_string.h \
  /usr/include/c++/10/ext/alloc_traits.h \
  /usr/include/c++/10/bits/alloc_traits.h \
- /usr/include/c++/10/bits/stl_construct.h \
+ /usr/include/c++/10/bits/stl_construct.h /usr/include/c++/10/string_view \
+ /usr/include/c++/10/bits/functional_hash.h \
+ /usr/include/c++/10/bits/string_view.tcc \
  /usr/include/c++/10/ext/string_conversions.h /usr/include/c++/10/cstdlib \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -123,7 +126,6 @@ CMakeFiles/Rational.dir/main.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
- /usr/include/c++/10/bits/functional_hash.h \
  /usr/include/c++/10/bits/basic_string.tcc \
  /usr/include/c++/10/bits/locale_classes.tcc \
  /usr/include/c++/10/system_error \
@@ -140,4 +142,7 @@ CMakeFiles/Rational.dir/main.cpp.o: \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc /usr/include/c++/10/istream \
  /usr/include/c++/10/bits/istream.tcc \
- /home/zogwort/myDev/CS202/HW5/Rational/Rational.hpp
+ /home/zogwort/myDev/CS202/HW5/Rational/Rational.hpp \
+ /usr/include/c++/10/numeric /usr/include/c++/10/bits/stl_numeric.h \
+ /usr/include/c++/10/pstl/glue_numeric_defs.h \
+ /usr/include/c++/10/pstl/execution_defs.h
