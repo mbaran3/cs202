@@ -10,6 +10,9 @@ class Rational{
     friend Rational<Y> operator + (const Rational<Y> &left, const Rational<Y> right);
     template<typename Y>
     friend Rational<Y> operator - (const Rational<Y> &left);
+    template<typename Y>
+    friend bool operator == (const Rational<Y> &left, const Rational<Y> &right);
+
     
 public:
 
@@ -88,3 +91,7 @@ template<typename T>
 Rational<T> operator / (const Rational<T> &left, const Rational<T> &right){
     return left  /= right;
 }
+template<typename T>
+bool operator == (const Rational<T> &left, const Rational<T> &right){
+    return left._numerator == right._numerator && left._denominator == right._denominator;
+} 

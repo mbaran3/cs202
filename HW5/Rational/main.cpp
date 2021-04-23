@@ -15,7 +15,10 @@ int main(){
     std::cout << "One now equals " << one << std::endl; 
     one /= oneThird;
     std::cout << "One now equals " << one << std::endl;    
-
+    Rational<int> oneThird2(1, 3);
+    if(oneThird == oneThird2)
+        std::cout << "They are equal" << std::endl;
+    
 
     return 0;
 }
