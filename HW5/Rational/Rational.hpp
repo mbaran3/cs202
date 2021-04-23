@@ -6,12 +6,13 @@ class Rational{
 
     template<typename Y>
     friend std::ostream& operator << (std::ostream& os, const Rational<Y> &obj);
-
+    template<typename Y>
+    friend Rational<Y> operator + (const Rational<Y> &left, const Rational<Y> right);
 public:
 
+    Rational<T> & operator +=(const Rational<T> &right);
     Rational(T numerator, T denominator);
     
-
 private:
     
     void reduce();
@@ -36,10 +37,14 @@ void Rational<T>::reduce(){
     }
 }
 
-
-
 template<typename T>
 std::ostream& operator << (std::ostream& os, const Rational<T> &obj){
     return os << obj._numerator << "/" << obj._denominator;
 }
-
+template<typename T>
+Rational<T>&  Rational<T>::operator += (const Rational<T> &right){
+    _numerator = _numerator * right._denominator + right._numerator * _denominator;
+    _denominator = right._denominator * _denominator;
+    reduce();
+    return *this;
+}
