@@ -7,7 +7,7 @@ int main(){
     Rational<int> oneHalf(2, 4);
     Rational<int> one (1, 1);
     std::cout << oneThird << " " << oneHalf << std::endl;
-    one += oneHalf;
+    one = one + oneHalf;
     std::cout << "One now equals " << one << std::endl; 
     
     
