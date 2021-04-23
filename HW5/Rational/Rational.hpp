@@ -13,8 +13,9 @@ class Rational{
     
 public:
 
-   Rational<T> & operator *=(const Rational<T> &right);
-   Rational<T> & operator +=(const Rational<T> &right);
+   Rational<T> & operator /= (const Rational<T> &right); 
+   Rational<T> & operator *= (const Rational<T> &right);
+   Rational<T> & operator += (const Rational<T> &right);
    Rational(T numerator, T denominator);
     
 private:
@@ -71,9 +72,19 @@ template<typename T>
 Rational<T>& Rational<T>::operator *=(const Rational<T> &right){
     _numerator *= right._numerator;
     _denominator *= right._denominator;
+    reduce();
     return *this;
 }
 template<typename T>
 Rational<T> operator * (Rational<T> &left, const Rational<T> &right){
     return left *= right;    
-} 
+}
+template<typename T> 
+Rational<T> & Rational<T>::operator /= (const Rational<T> &right){
+    Rational<T> inverse(right._denominator, right._numerator);
+    return *this *= inverse;
+}
+template<typename T>
+Rational<T> operator / (const Rational<T> &left, const Rational<T> &right){
+    return left  /= right;
+}

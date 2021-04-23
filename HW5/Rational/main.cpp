@@ -13,6 +13,9 @@ int main(){
     std::cout << "One now equals " << one << std::endl;
     one = one * oneThird;
     std::cout << "One now equals " << one << std::endl; 
+    one /= oneThird;
+    std::cout << "One now equals " << one << std::endl;    
+
 
     return 0;
 }
