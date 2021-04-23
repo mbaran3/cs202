@@ -8,7 +8,9 @@ class Rational{
     friend std::ostream& operator << (std::ostream& os, const Rational<Y> &obj);
     template<typename Y>
     friend Rational<Y> operator + (const Rational<Y> &left, const Rational<Y> right);
-
+    template<typename Y>
+    friend Rational<Y> operator - (const Rational<Y> &left);
+    
 public:
 
    Rational<T> & operator +=(const Rational<T> &right);
@@ -21,6 +23,7 @@ private:
     T _denominator;
 
 };
+
 template<typename T>
 Rational<T>::Rational(T numerator, T denominator):_numerator(numerator),
  _denominator(denominator) {
@@ -55,4 +58,12 @@ Rational<T> operator + (const Rational<T> &left, const Rational<T> right){
     holder += right;
     return holder;
 }
-
+template<typename Y>
+Rational<Y> operator - (const Rational<Y> &left){
+    return { -left._numerator, left._denominator};
+} 
+template<typename T>
+Rational<T> operator - (const Rational<T> &left, const Rational<T> &right){
+    return left  + -right;
+}
+   
