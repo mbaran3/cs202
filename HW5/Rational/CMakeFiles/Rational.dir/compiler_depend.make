@@ -183,8 +183,32 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
   /usr/include/c++/10/numeric \
   /usr/include/c++/10/bits/stl_numeric.h \
   /usr/include/c++/10/pstl/glue_numeric_defs.h \
-  /usr/include/c++/10/pstl/execution_defs.h
+  /usr/include/c++/10/pstl/execution_defs.h \
+  /usr/include/c++/10/fstream \
+  /usr/include/c++/10/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
+  /usr/include/c++/10/bits/fstream.tcc \
+  /usr/include/c++/10/array \
+  /usr/include/c++/10/utility \
+  /usr/include/c++/10/bits/stl_relops.h \
+  /usr/include/c++/10/sstream \
+  /usr/include/c++/10/bits/sstream.tcc
 
+
+/usr/include/c++/10/sstream:
+
+/usr/include/c++/10/bits/stl_relops.h:
+
+/usr/include/c++/10/utility:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h:
+
+/usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h:
+
+/usr/include/c++/10/bits/codecvt.h:
+
+/usr/include/c++/10/fstream:
 
 /usr/include/c++/10/pstl/execution_defs.h:
 
@@ -264,6 +288,8 @@ Rational.hpp:
 
 /usr/include/c++/10/bits/exception_defines.h:
 
+/usr/include/c++/10/bits/sstream.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
@@ -308,6 +334,8 @@ Rational.hpp:
 
 /usr/include/stdc-predef.h:
 
+/usr/include/c++/10/array:
+
 /usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
@@ -321,6 +349,8 @@ Rational.hpp:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/c++/10/bits/fstream.tcc:
 
 /usr/include/c++/10/bits/char_traits.h:
 
