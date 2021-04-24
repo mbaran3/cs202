@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/recursion.dir/StopWatch.cpp.o"
+  "CMakeFiles/recursion.dir/StopWatch.cpp.o.d"
   "CMakeFiles/recursion.dir/main.cpp.o"
   "CMakeFiles/recursion.dir/main.cpp.o.d"
   "recursion"

@@ -40,13 +40,17 @@ CMakeFiles/recursion.dir/main.cpp.o: \
  /usr/include/c++/10/bits/cpp_type_traits.h \
  /usr/include/c++/10/ext/type_traits.h \
  /usr/include/c++/10/ext/numeric_traits.h \
- /usr/include/c++/10/bits/stl_pair.h \
+ /usr/include/c++/10/bits/stl_pair.h /usr/include/c++/10/compare \
+ /usr/include/c++/10/concepts \
  /usr/include/c++/10/bits/stl_iterator_base_types.h \
+ /usr/include/c++/10/bits/iterator_concepts.h \
+ /usr/include/c++/10/bits/ptr_traits.h \
+ /usr/include/c++/10/bits/range_cmp.h \
  /usr/include/c++/10/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/10/bits/concept_check.h \
  /usr/include/c++/10/debug/assertions.h \
  /usr/include/c++/10/bits/stl_iterator.h \
- /usr/include/c++/10/bits/ptr_traits.h /usr/include/c++/10/debug/debug.h \
+ /usr/include/c++/10/debug/debug.h \
  /usr/include/c++/10/bits/predefined_ops.h /usr/include/c++/10/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
@@ -94,17 +98,7 @@ CMakeFiles/recursion.dir/main.cpp.o: \
  /usr/include/c++/10/bits/cxxabi_forced.h \
  /usr/include/c++/10/bits/stl_function.h \
  /usr/include/c++/10/backward/binders.h \
- /usr/include/c++/10/bits/range_access.h \
- /usr/include/c++/10/initializer_list \
- /usr/include/c++/10/bits/iterator_concepts.h \
- /usr/include/c++/10/concepts /usr/include/c++/10/bits/range_cmp.h \
- /usr/include/c++/10/bits/basic_string.h \
- /usr/include/c++/10/ext/alloc_traits.h \
- /usr/include/c++/10/bits/alloc_traits.h \
- /usr/include/c++/10/bits/stl_construct.h /usr/include/c++/10/string_view \
- /usr/include/c++/10/bits/functional_hash.h \
- /usr/include/c++/10/bits/string_view.tcc \
- /usr/include/c++/10/ext/string_conversions.h /usr/include/c++/10/cstdlib \
+ /usr/include/c++/10/bits/stl_algo.h /usr/include/c++/10/cstdlib \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/endian.h \
@@ -114,7 +108,19 @@ CMakeFiles/recursion.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
  /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/c++/10/bits/std_abs.h /usr/include/c++/10/cstdio \
+ /usr/include/c++/10/bits/std_abs.h \
+ /usr/include/c++/10/bits/algorithmfwd.h \
+ /usr/include/c++/10/initializer_list /usr/include/c++/10/bits/stl_heap.h \
+ /usr/include/c++/10/bits/stl_tempbuf.h \
+ /usr/include/c++/10/bits/stl_construct.h \
+ /usr/include/c++/10/bits/uniform_int_dist.h /usr/include/c++/10/limits \
+ /usr/include/c++/10/bits/range_access.h \
+ /usr/include/c++/10/bits/basic_string.h \
+ /usr/include/c++/10/ext/alloc_traits.h \
+ /usr/include/c++/10/bits/alloc_traits.h /usr/include/c++/10/string_view \
+ /usr/include/c++/10/bits/functional_hash.h \
+ /usr/include/c++/10/bits/string_view.tcc \
+ /usr/include/c++/10/ext/string_conversions.h /usr/include/c++/10/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
@@ -141,4 +147,8 @@ CMakeFiles/recursion.dir/main.cpp.o: \
  /usr/include/c++/10/bits/locale_facets.tcc \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc /usr/include/c++/10/istream \
- /usr/include/c++/10/bits/istream.tcc
+ /usr/include/c++/10/bits/istream.tcc \
+ /home/zogwort/myDev/CS202/HW5/Recursion/StopWatch.h \
+ /usr/include/c++/10/chrono /usr/include/c++/10/ratio \
+ /usr/include/c++/10/ctime /usr/include/c++/10/bits/parse_numbers.h \
+ /home/zogwort/myDev/CS202/HW5/Recursion/StopWatch.cpp

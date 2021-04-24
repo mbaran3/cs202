@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/zogwort/myDev/CS202/HW5/Recursion/StopWatch.cpp" "CMakeFiles/recursion.dir/StopWatch.cpp.o" "gcc" "CMakeFiles/recursion.dir/StopWatch.cpp.o.d"
   "/home/zogwort/myDev/CS202/HW5/Recursion/main.cpp" "CMakeFiles/recursion.dir/main.cpp.o" "gcc" "CMakeFiles/recursion.dir/main.cpp.o.d"
   )
 

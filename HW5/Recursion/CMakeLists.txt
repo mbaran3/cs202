@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
 project(Recursion)
-set(CMAKE_CXX_STANDARD 17)
-set(CXX_STANDARD_REQUIRED 17)
-add_executable(recursion main.cpp)
+set(CMAKE_CXX_STANDARD 20)
+set(CXX_STANDARD_REQUIRED 20)
+add_executable(recursion main.cpp StopWatch.cpp StopWatch.h)

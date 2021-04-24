@@ -129,6 +129,30 @@ recursion/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/recursion.dir/build.make CMakeFiles/recursion.dir/build
 .PHONY : recursion/fast
 
+StopWatch.o: StopWatch.cpp.o
+.PHONY : StopWatch.o
+
+# target to build an object file
+StopWatch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/recursion.dir/build.make CMakeFiles/recursion.dir/StopWatch.cpp.o
+.PHONY : StopWatch.cpp.o
+
+StopWatch.i: StopWatch.cpp.i
+.PHONY : StopWatch.i
+
+# target to preprocess a source file
+StopWatch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/recursion.dir/build.make CMakeFiles/recursion.dir/StopWatch.cpp.i
+.PHONY : StopWatch.cpp.i
+
+StopWatch.s: StopWatch.cpp.s
+.PHONY : StopWatch.s
+
+# target to generate assembly for a file
+StopWatch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/recursion.dir/build.make CMakeFiles/recursion.dir/StopWatch.cpp.s
+.PHONY : StopWatch.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... recursion"
+	@echo "... StopWatch.o"
+	@echo "... StopWatch.i"
+	@echo "... StopWatch.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
