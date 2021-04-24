@@ -1,6 +1,3 @@
-#include <iostream>
-#include "Rational.hpp"
-
 // Template homework test program
 // for CS 202 Fall 2018
 // based on:
@@ -10,7 +7,7 @@
 //
 
 // Includes for code to be tested
-// #include "myreadwrite.hpp"   // For function templates myRead and myWrite
+#include "myreadwrite.hpp"   // For function templates myRead and myWrite
 // #include "myreadwrite.hpp"   // Double inclusion test
 #include "Rational.hpp"      // For Rational class template and opertaors
 #include "Rational.hpp"      // Double inclusion test
@@ -438,48 +435,48 @@ bool operator<(const Counter & a,
 //     Pass/fail status of tests have been registered with t.
 //     Appropriate messages have been printed to cout.
 // Does not throw (No-Throw Guarantee)
-// void test_myReadWrite(Tester & t)
-// {
-//     std::cout << "Test Suite: function templates myRead and myWrite" << std::endl;
+void test_myReadWrite(Tester & t)
+{
+    std::cout << "Test Suite: function templates myRead and myWrite" << std::endl;
     
-//     struct UncopyableData {
-//         char a;
-//         UncopyableData(const UncopyableData &) = delete;
-//         UncopyableData() = default;
-//     };
+    struct UncopyableData {
+        char a;
+        UncopyableData(const UncopyableData &) = delete;
+        UncopyableData() = default;
+    };
     
-//     std::cout << "Test Suite: Using myWrite to write some things to \"data.dat\"" << std::endl;
-//     std::ofstream ofile("data.dat");
-//     std::array<float,3> w = {1.1,2.2,3.3};
-//     double x=13.3;
-//     const int y=5;
-//     UncopyableData z{'a'};
+    std::cout << "Test Suite: Using myWrite to write some things to \"data.dat\"" << std::endl;
+    std::ofstream ofile("data.dat");
+    std::array<float,3> w = {1.1,2.2,3.3};
+    double x=13.3;
+    const int y=5;
+    UncopyableData z{'a'};
 
-//     myWrite(ofile,w);
-//     myWrite(ofile,x);
-//     myWrite(ofile,y);
-//     myWrite(ofile,z);
-//     ofile.close();
+    myWrite(ofile,w);
+    myWrite(ofile,x);
+    myWrite(ofile,y);
+    myWrite(ofile,z);
+    ofile.close();
     
-//     std::cout << "Test Suite: Using myRead to read those things back from \"data.dat\"" << std::endl;
-//     std::ifstream ifile("data.dat");
-//     std::array<float,3> readw;
-//     double readx;
-//     int ready[2]={999,2};
-//     UncopyableData readz;
+    std::cout << "Test Suite: Using myRead to read those things back from \"data.dat\"" << std::endl;
+    std::ifstream ifile("data.dat");
+    std::array<float,3> readw;
+    double readx;
+    int ready[2]={999,2};
+    UncopyableData readz;
     
-//     myRead(ifile,readw);
-//     myRead(ifile,readx);
-//     myRead(ifile,ready[0]);
-//     myRead(ifile,readz);
-//     ifile.close();
-//     // Check correctness
-//     t.test(w==readw, "An array<float,3> is written and read correctly");
-//     t.test(x==readx, "A double is written and read correctly");
-//     t.test(y==ready[0], "A const int is written and read correctly");
-//     t.test(2==ready[1], "Reading that int did not overflow into the next element of an array");
-//     t.test(z.a==readz.a, "An uncopyable class is written and read correctly");
-// }
+    myRead(ifile,readw);
+    myRead(ifile,readx);
+    myRead(ifile,ready[0]);
+    myRead(ifile,readz);
+    ifile.close();
+    // Check correctness
+    t.test(w==readw, "An array<float,3> is written and read correctly");
+    t.test(x==readx, "A double is written and read correctly");
+    t.test(y==ready[0], "A const int is written and read correctly");
+    t.test(2==ready[1], "Reading that int did not overflow into the next element of an array");
+    t.test(z.a==readz.a, "An uncopyable class is written and read correctly");
+}
 
 // test_RAIIPtr
 // Test suite for function template printVector
@@ -533,7 +530,7 @@ void test_templates(Tester & t)
 {
     // Do all the test suites
     std::cout << "TEST SUITES FOR Templates homework" << std::endl;
-    // test_myReadWrite(t);
+    test_myReadWrite(t);
     test_Rational(t);
 }
 
@@ -561,8 +558,7 @@ int main()
         << std::endl;
     }
     std::cout << std::endl;
-    Rational<short> zero;
-    std::cout << zero;
+    
     std::cout << "Press ENTER to quit ";
     while (std::cin.get() != '\n') ;
     

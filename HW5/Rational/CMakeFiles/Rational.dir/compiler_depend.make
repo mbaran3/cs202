@@ -3,6 +3,7 @@
 
 CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
   /usr/include/stdc-predef.h \
+  myreadwrite.hpp \
   /usr/include/c++/10/iostream \
   /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \
@@ -179,28 +180,28 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
   /usr/include/c++/10/bits/ostream.tcc \
   /usr/include/c++/10/istream \
   /usr/include/c++/10/bits/istream.tcc \
-  Rational.hpp \
-  /usr/include/c++/10/numeric \
-  /usr/include/c++/10/bits/stl_numeric.h \
-  /usr/include/c++/10/pstl/glue_numeric_defs.h \
-  /usr/include/c++/10/pstl/execution_defs.h \
+  /usr/include/c++/10/array \
+  /usr/include/c++/10/utility \
+  /usr/include/c++/10/bits/stl_relops.h \
   /usr/include/c++/10/fstream \
   /usr/include/c++/10/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
   /usr/include/c++/10/bits/fstream.tcc \
-  /usr/include/c++/10/array \
-  /usr/include/c++/10/utility \
-  /usr/include/c++/10/bits/stl_relops.h \
+  Rational.hpp \
+  /usr/include/c++/10/numeric \
+  /usr/include/c++/10/bits/stl_numeric.h \
+  /usr/include/c++/10/pstl/glue_numeric_defs.h \
+  /usr/include/c++/10/pstl/execution_defs.h \
   /usr/include/c++/10/sstream \
   /usr/include/c++/10/bits/sstream.tcc
 
 
 /usr/include/c++/10/sstream:
 
-/usr/include/c++/10/bits/stl_relops.h:
+/usr/include/c++/10/pstl/execution_defs.h:
 
-/usr/include/c++/10/utility:
+/usr/include/c++/10/bits/stl_numeric.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h:
 
@@ -210,9 +211,9 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
 
 /usr/include/c++/10/fstream:
 
-/usr/include/c++/10/pstl/execution_defs.h:
+/usr/include/c++/10/bits/stl_relops.h:
 
-/usr/include/c++/10/bits/stl_numeric.h:
+/usr/include/c++/10/utility:
 
 /usr/include/c++/10/istream:
 
@@ -226,9 +227,7 @@ CMakeFiles/Rational.dir/main.cpp.o: main.cpp \
 
 /usr/include/wctype.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+/usr/include/c++/10/bits/basic_ios.h:
 
 /usr/include/ctype.h:
 
@@ -288,6 +287,10 @@ Rational.hpp:
 
 /usr/include/c++/10/bits/exception_defines.h:
 
+/usr/include/x86_64-linux-gnu/c++/10/bits/ctype_inline.h:
+
+/usr/include/c++/10/bits/exception.h:
+
 /usr/include/c++/10/bits/sstream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
@@ -296,29 +299,7 @@ Rational.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/10/pstl/glue_numeric_defs.h:
-
-/usr/include/c++/10/debug/assertions.h:
-
-/usr/include/c++/10/bits/hash_bytes.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/c++/10/bits/allocator.h:
-
-/usr/include/c++/10/bits/istream.tcc:
-
-/usr/include/c++/10/bits/std_abs.h:
-
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/c++/10/iosfwd:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/10/debug/debug.h:
 
@@ -332,17 +313,43 @@ Rational.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
+/usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
+
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/10/array:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/cpu_defines.h:
 
-/usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h:
-
 /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h:
 
 /usr/include/c++/10/stdexcept:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/10/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/10/debug/assertions.h:
+
+/usr/include/c++/10/bits/hash_bytes.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/c++/10/bits/allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/c++/10/ext/alloc_traits.h:
+
+/usr/include/c++/10/bits/istream.tcc:
+
+/usr/include/c++/10/bits/std_abs.h:
+
+/usr/include/c++/10/iosfwd:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/10/bits/stl_iterator_base_funcs.h:
 
@@ -374,6 +381,8 @@ Rational.hpp:
 
 /usr/include/c++/10/bits/ostream.tcc:
 
+myreadwrite.hpp:
+
 /usr/include/c++/10/bits/postypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
@@ -391,14 +400,6 @@ Rational.hpp:
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h:
 
 /usr/include/c++/10/bits/basic_string.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/ctype_inline.h:
-
-/usr/include/c++/10/bits/exception.h:
-
-/usr/include/c++/10/ext/alloc_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/c++/10/cwchar:
 
@@ -427,6 +428,10 @@ Rational.hpp:
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 main.cpp:
 
@@ -579,5 +584,3 @@ main.cpp:
 /usr/include/c++/10/bits/locale_classes.tcc:
 
 /usr/include/c++/10/streambuf:
-
-/usr/include/c++/10/bits/basic_ios.h:
